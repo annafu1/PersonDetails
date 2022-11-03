@@ -14,23 +14,26 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
+            // use `counter` to identify the `current Person` in the array
+            // get `string Representation` of `currentPerson`
+            // append `stringRepresentation` to `result` variable
             // end loop
-        return result;
+        String result = "";
+        Integer counter = 0;
+        while (counter < personArray.length) {
+            Person person = personArray[counter];
+            result = result + person.toString();
+            counter++;
+        }
+            return result;
     }
 
 
 
     public String forLoop() {
-        String result = "";
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -41,14 +44,19 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        String result = "";
+        Integer value = 0;
+        for(int i = 0; i <personArray.length;i++) {
+            Person person = personArray[value];
+            result = result + person.toString();
+            value++;
+        }
         return result;
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
         // identify array's type
         // identify array's variable-name
 
@@ -57,7 +65,10 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        String result = "";
+        for (Person person : personArray) {
+            result = result + person.toString();
+        }
         return result;
     }
 
